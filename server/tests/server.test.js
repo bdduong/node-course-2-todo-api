@@ -38,7 +38,7 @@ describe('POST /todos', () => {
   it('should not create todo with bad data', (done) => {
     request(app)
       .post('/todos')
-      .send(6)
+      .send({})
       .expect(400)
       .end((err, res) => {
         if (err) {
